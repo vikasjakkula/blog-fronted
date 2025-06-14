@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+// Import necessary dependencies from React and React Router
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Import layout component
+import MainLayout from './layouts/MainLayout';
+
+// Import page components
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Dashboard from './pages/Dashboard';
+import Pricing from './pages/Pricing';
+
+// Import global styles
 import './App.css';
 
+// Main App component that sets up routing
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Router component wraps the entire application to enable routing
+    <Router>
+      {/* Routes component defines all available routes in the application */}
+      <Routes>
+        {/* MainLayout route acts as a parent route with nested child routes */}
+        <Route path="/" element={<MainLayout />}>
+          {/* Index route - shown when path is exactly "/" */}
+          <Route index element={<Home />} />
+          
+          {/* About page route - shown when path is "/about" */}
+          <Route path="about" element={<About />} />
+          
+          {/* Contact page route - shown when path is "/contact" */}
+          <Route path="contact" element={<Contact />} />
+          
+          {/* Follow page route (using Dashboard component) - shown when path is "/follow" */}
+          <Route path="follow" element={<Dashboard />} />
+          
+          {/* Pricing page route - shown when path is "/pricing" */}
+          <Route path="pricing" element={<Pricing />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
+// Export the App component as the default export
 export default App;

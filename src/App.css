@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -36,3 +39,21 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #61dafb;
+}
+
+.api-test {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #61dafb;
+  border-radius: 5px;
+}
+
+/* Add any additional global styles here */
