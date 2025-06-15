@@ -1,10 +1,16 @@
 // Import necessary dependencies from React and React Router
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 import './MainLayout.css';
 
 // MainLayout component that provides the common layout structure for all pages
 const MainLayout = () => {
+  const navigate = useNavigate();
+
+  const handleBlogClick = () => {
+    navigate('/');
+  };
+
   return (
     // Main container div that wraps the entire layout
     <div className="main-layout">
@@ -12,7 +18,7 @@ const MainLayout = () => {
       <nav className="main-nav">
         {/* Left side - Blog text */}
         <div className="nav-left">
-          <Link to="/" className="blog-title">Blog</Link>
+          <Link to="/" className="blog-title" onClick={handleBlogClick}>Blog</Link>
         </div>
 
         {/* Right side navigation links */}
@@ -24,9 +30,8 @@ const MainLayout = () => {
           {/* Contact page link */}
           <Link to="/contact" className="nav-link">Contact</Link>
           {/* Follow page link */}
+          {/* Hero page link */}
           <Link to="/follow" className="nav-link">Follow</Link>
-          {/* Pricing page link */}
-          <Link to="/pricing" className="nav-link">Pricing</Link>
         </div>
       </nav>
 

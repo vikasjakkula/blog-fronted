@@ -9,6 +9,18 @@ const Home = () => {
     <div className="home">
       {/* Main heading */}
       <h1>Welcome To My Blog</h1>
+      <img 
+        src="/Dp.png" 
+        alt="Dp" 
+        style={{
+          width: '200px',
+          height: '200px',
+          borderRadius: '50%',
+          objectFit: 'cover',
+          display: 'block',
+          margin: '20px auto'
+        }}
+      />
       {/* Introduction text */}
       <p>This modern is just for testing purposes , Checkout My page please</p>
       <p>Myself Vikas Yadav</p>
@@ -37,9 +49,11 @@ const Home = () => {
           <p>2025-2029</p>
         </div>
       </div>
-      <div className="feature-card m-4">
+      <div className="feature-card" style={{ marginTop: '2rem' }}>
         <h2>Business</h2>
-        <p>2029-2033</p>
+        <p>2030-2050</p>
+        <p>Sell the company (Private Equity)</p>
+        <p>Have Fun!</p>
       </div>
       </div>
     </div>

@@ -8,37 +8,74 @@ const About = () => {
     // Main container for the about page
     <div className="about">
       {/* Page title */}
-      <h1>About Us</h1>
+      <h1>About Vikas!</h1>
       
       {/* Main content container */}
       <div className="about-content">
         {/* Mission section */}
         <div className="about-section">
-          <h2>Our Mission</h2>
+          <h2>Born</h2>
           <p>
-            We are dedicated to creating modern, efficient, and user-friendly web applications
-            using the latest technologies and best practices in software development.
+            <li>4th June 2008</li>
           </p>
         </div>
 
         {/* Team section */}
         <div className="about-section">
-          <h2>Our Team</h2>
+          <h2>Education</h2>
           <p>
-            Our team consists of passionate developers who are committed to delivering
-            high-quality solutions that meet our clients' needs and exceed their expectations.
+            <li>Vijay Mary Kindergarten School</li>
+            <li>Bhashyam high school</li>
+            <li>Nano jr.cllg</li>
+            <li>CBIT</li>
           </p>
         </div>
 
         {/* Technology stack section */}
         <div className="about-section">
-          <h2>Our Technology Stack</h2>
+          <h2>What I do?</h2>
           {/* List of technologies used */}
           <ul>
-            <li>React.js for frontend development</li>
-            <li>Modern CSS for styling</li>
-            <li>React Router for navigation</li>
-            <li>Best practices in web development</li>
+            <li>Coding</li>
+            <li>Gaming</li>
+            <li>Student</li>
+            <li>Gym</li>
+            <li>Workout</li>
+            <li>Social Media</li>
+            <li>Repeat</li>
+          </ul>
+        </div>
+
+        {/* Passion section */}
+        <div className="about-section">
+          <h2>Passion</h2>
+          <ul>
+            <li>Building apps from scratch</li>
+            <li>Exploring React & Full Stack development</li>
+            <li>Game development (especially car racing games)</li>
+            <li>3D design using Blender lol (not good at it)</li>
+          </ul>
+        </div>
+
+        {/* Current Goals section */}
+        <div className="about-section">
+          <h2>Current Goals</h2>
+          <ul>
+            <li>Master React, Node.js, Full Stack</li>
+            <li>Build a full CRUD dashboard with sidebar navigation</li>
+            <li>Publish my first game project inspired by "Night City Racing"</li>
+            <li>Launch my own professional portfolio website</li> 
+            <li></li>
+          </ul>
+        </div>
+
+        {/* Fun Facts section */}
+        <div className="about-section">
+          <h2>Fun Facts</h2>
+          <ul>
+            <li>I believe coding is like solving a puzzle — fun and powerful</li>
+            <li>I'm inspired by creators who build in public (Brother)</li>
+            <li>One day, I want to create something that helps thousands of beginners like me</li>
           </ul>
         </div>
       </div>

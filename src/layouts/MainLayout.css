@@ -3,18 +3,21 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 /* Navigation bar styling */
 .main-nav {
-  /* White background with subtle shadow for depth */
-  background-color: #ffffff;
+  /* Background with subtle shadow for depth */
+  background-color: var(--card-bg);
   padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-color);
   /* Flexbox layout to position nav items */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 /* Left side styling - Blog text */
@@ -26,14 +29,14 @@
 /* Blog title styling */
 .blog-title {
   text-decoration: none;
-  color: #333;
+  color: var(--text-color);
   font-size: 1.8rem;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .blog-title:hover {
-  color: #007bff;
+  color: #3498db;
 }
 
 /* Right side navigation links */
@@ -48,7 +51,7 @@
 .nav-link {
   /* Remove default link styling */
   text-decoration: none;
-  color: #333;
+  color: var(--text-color);
   font-weight: 500;
   /* Add padding and rounded corners */
   padding: 0.5rem 1rem;
@@ -59,8 +62,8 @@
 
 /* Hover effect for navigation links */
 .nav-link:hover {
-  background-color: #f0f0f0;
-  color: #007bff;
+  background-color: var(--hover-shadow);
+  color: #3498db;
 }
 
 /* Main content area styling */
@@ -69,8 +72,9 @@
   flex: 1;
   /* Add padding around content */
   padding: 2rem;
-  /* Light gray background */
-  background-color: #f8f9fa;
+  /* Background color */
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 /* Responsive design for mobile devices */

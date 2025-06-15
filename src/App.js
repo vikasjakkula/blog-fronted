@@ -10,7 +10,11 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Dashboard from './pages/Dashboard';
-import Pricing from './pages/Pricing';
+import Hero from './pages/Hero';
+
+// Import theme components
+import { ThemeProvider } from './context/ThemeContext';
+import ThemeToggle from './components/ThemeToggle';
 
 // Import global styles
 import './App.css';
@@ -18,29 +22,35 @@ import './App.css';
 // Main App component that sets up routing
 function App() {
   return (
-    // Router component wraps the entire application to enable routing
-    <Router>
-      {/* Routes component defines all available routes in the application */}
-      <Routes>
-        {/* MainLayout route acts as a parent route with nested child routes */}
-        <Route path="/" element={<MainLayout />}>
-          {/* Index route - shown when path is exactly "/" */}
-          <Route index element={<Home />} />
-          
-          {/* About page route - shown when path is "/about" */}
-          <Route path="about" element={<About />} />
-          
-          {/* Contact page route - shown when path is "/contact" */}
-          <Route path="contact" element={<Contact />} />
-          
-          {/* Follow page route (using Dashboard component) - shown when path is "/follow" */}
-          <Route path="follow" element={<Dashboard />} />
-          
-          {/* Pricing page route - shown when path is "/pricing" */}
-          <Route path="pricing" element={<Pricing />} />
-        </Route>
-      </Routes>
-    </Router>
+    // ThemeProvider wraps the entire application
+    <ThemeProvider>
+      {/* Router component wraps the entire application to enable routing */}
+      <Router>
+        {/* Theme toggle button */}
+        <ThemeToggle />
+        
+        {/* Routes component defines all available routes in the application */}
+        <Routes>
+          {/* MainLayout route acts as a parent route with nested child routes */}
+          <Route path="/" element={<MainLayout />}>
+            {/* Index route - shown when path is exactly "/" */}
+            <Route index element={<Home />} />
+            
+            {/* About page route - shown when path is "/about" */}
+            <Route path="about" element={<About />} />
+            
+            {/* Contact page route - shown when path is "/contact" */}
+            <Route path="contact" element={<Contact />} />
+            
+            {/* Follow page route (using Dashboard component) - shown when path is "/follow" */}
+            <Route path="follow" element={<Dashboard />} />
+
+            {/* Hero page route - shown when path is "/hero" */}
+            <Route path="hero" element={<Hero />} />
+          </Route>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 

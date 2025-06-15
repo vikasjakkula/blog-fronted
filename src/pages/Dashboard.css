@@ -1,4 +1,4 @@
-.dashboard {
+.Social Media{
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
@@ -120,4 +120,31 @@
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.dashboard h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.dashboard a {
+  color: #1DA1F2;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.dashboard a:hover {
+  color: #0c85d0;
+  text-decoration: underline;
 } 
