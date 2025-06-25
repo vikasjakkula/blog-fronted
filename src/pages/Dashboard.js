@@ -5,7 +5,7 @@ import './Dashboard.css';
 const Dashboard = () => {
   return (
     <div className="dashboard">
-      <h2>Follow me on <a href="https://x.com/jakkula_vi60475" target="_blank" rel="noopener noreferrer">X</a> and support me while doing things!</h2>
+      <h2>Follow me on <a href="https://x.com/vikas_070v" target="_blank" rel="noopener noreferrer">X</a> and support me while doing things!</h2>
     </div>
   );
 };

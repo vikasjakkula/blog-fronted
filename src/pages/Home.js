@@ -1,12 +1,37 @@
 // Import necessary dependencies
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
+import { FaSearch } from 'react-icons/fa';
 
 // Home component - the landing page of the application
 const Home = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    // Add your search functionality here
+    console.log('Searching for:', searchQuery);
+  };
+
   return (
     // Main container for the home page
     <div className="home">
+      {/* Search Bar */}
+      <div className="search-container">
+        <form onSubmit={handleSearch} className="search-form">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="search-input"
+          />
+          <button type="submit" className="search-button">
+            <FaSearch className="search-icon" />
+          </button>
+        </form>
+      </div>
+
       {/* Main heading */}
       <h1>Welcome To My Blog</h1>
       <img 
@@ -59,7 +84,5 @@ const Home = () => {
     </div>
   );
 };
-
-
 
 export default Home;

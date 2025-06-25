@@ -1,3 +1,25 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #2c3e50;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --border-color: #ddd;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --border-color: #333;
+  --card-bg: #2d2d2d;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
 /* Reset default browser styles */
 * {
   margin: 0;
@@ -16,9 +38,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Background and text colors */
-  background-color: #f5f6fa;
-  color: #2c3e50;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* Code block styling */
@@ -30,23 +53,39 @@ code {
 /* Link styling */
 a {
   text-decoration: none;
-  color: inherit;
+  color: var(--primary-color);
 }
 
 /* Button styling */
 button {
   cursor: pointer;
   font-family: inherit;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
 }
 
 /* Form element styling */
 input, textarea, select {
   font-family: inherit;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  border-radius: 4px;
 }
 
 /* Heading styles */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
+  color: var(--text-color);
 }
 
 /* Image styling */
@@ -57,7 +96,7 @@ img {
 
 .layout {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -81,7 +120,8 @@ img {
 
 .main-content {
   flex: 1;
-  background: #f4f4f4;
+  padding: 20px;
+  background-color: var(--bg-color);
 }
 
 .header {
@@ -92,4 +132,13 @@ img {
 
 .content-area {
   padding: 20px;
+}
+
+/* Card styles */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  margin-bottom: 20px;
 }

@@ -7,7 +7,6 @@ import './Contact.css';
 const Contact = () => {
   // State to manage form data and toast visibility
   const [formData, setFormData] = useState({
-    name: '',
     email: '',
     message: ''
   });
@@ -24,19 +23,18 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.send(
-      'service_chkwhu9',     // We still need this from Email Services
-      'template_7th8x77',    // Your Template ID
+      'YOUR_SERVICE_ID',     // Replace with your Service ID from EmailJS
+      'YOUR_TEMPLATE_ID',    // Replace with your Template ID from EmailJS
       {
-        name: formData.name,
-        email: formData.email,
+        user_email: formData.email,
         message: formData.message,
       },
-      'ETg6Pru5Pc4QVAXX1'    // Your Public Key
+      'YOUR_PUBLIC_KEY'      // Replace with your Public Key from EmailJS
     )
     .then(() => {
       setShowToast(true);
       setTimeout(() => setShowToast(false), 3000);
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ email: '', message: '' });
     })
     .catch((error) => {
       alert('Failed to send message: ' + error.text);
@@ -55,18 +53,25 @@ const Contact = () => {
       )}
       <h1>Contact Me ❤️‍🔥</h1>
       <div className="contact-container">
+        {/* Contact information section */}
+        <div className="contact-info">
+          <h2>Get in Touch</h2>
+          <p>I'd love to hear from you. Please fill your opinion out there through X or Reddit</p>
+          {/* Contact details */}
+          <div className="info-item">
+            <h3>Email</h3>
+            <p>vikasjakkula08@gmail.com</p>
+          </div>
+          <div className="info-item">
+            <h3>Social Media</h3>
+            <p>X (Twitter): @vikas_070v</p>
+            <p>GitHub: github.com/vikasjakkula</p>
+            <p>Reddit: u/Relevant_Whole2540</p>
+          </div>
+        </div>
+
         {/* Contact form section */}
         <form className="contact-form" onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>Name</label>
-            <input
-              type="text"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-            />
-          </div>
           {/* Email input field */}
           <div className="form-group">
             <label>Email</label>
@@ -91,17 +96,6 @@ const Contact = () => {
           {/* Submit button */}
           <button type="submit" className="submit-btn">Send Message</button>
         </form>
-
-        {/* Contact information section */}
-        <div className="contact-info">
-          <h2>Connect Me ❤️‍🔥</h2>
-          <div className="social-links">
-            <a href="https://x.com/jakkula_vi60475" target="_blank" rel="noopener noreferrer">X (Twitter): @jakkula_vi60475</a>
-            <a href="https://github.com/vikasjakkula" target="_blank" rel="noopener noreferrer">GitHub: github.com/vikasjakkula</a>
-            <a href="mailto:vikasjakkula08@gmail.com">Email: vikasjakkula08@gmail.com</a>
-            <a href="https://www.reddit.com/user/Relevant_Whole2540" target="_blank" rel="noopener noreferrer">Reddit: u/Relevant_Whole2540</a>
-          </div>
-        </div>
       </div>
     </div>
   );
