@@ -58,16 +58,47 @@ const Contact = () => {
           <h2>Get in Touch</h2>
           <p>I'd love to hear from you. Please fill your opinion out there through X or Reddit</p>
           {/* Contact details */}
-          <div className="info-item">
-            <h3>Email</h3>
-            <p>vikasjakkula08@gmail.com</p>
-          </div>
-          <div className="info-item">
-            <h3>Social Media</h3>
-            <p>X (Twitter): @vikas_070v</p>
-            <p>GitHub: github.com/vikasjakkula</p>
-            <p>Reddit: u/Relevant_Whole2540</p>
-          </div>
+          <ul>
+            <li>
+              <strong>Email:</strong>{' '}
+              <a href="mailto:vikasjakkula08@gmail.com">vikasjakkula08@gmail.com</a>
+            </li>
+            <li>
+              <strong>Social Media</strong>
+              <ul>
+                <li>
+                  X (Twitter):{' '}
+                  <a
+                    href="https://twitter.com/vikas_070v"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @vikas_070v
+                  </a>
+                </li>
+                <li>
+                  GitHub:{' '}
+                  <a
+                    href="https://github.com/vikasjakkula"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github.com/vikasjakkula
+                  </a>
+                </li>
+                <li>
+                  Reddit:{' '}
+                  <a
+                    href="https://www.reddit.com/user/Relevant_Whole2540"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    u/Relevant_Whole2540
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
 
         {/* Contact form section */}

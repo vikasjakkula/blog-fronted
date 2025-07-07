@@ -70,7 +70,7 @@ const Home = () => {
         {/* Feature card 3 */}
         <div className="feature-card">
           <h2>Engineering</h2>
-          <p>CBIT</p>
+          <p>NGIT i.e,Neil Gogte Institute of Technology</p>
           <p>2025-2029</p>
         </div>
       </div>
