@@ -27,7 +27,7 @@ const About = () => {
             <li>Vijay Mary Kindergarten School</li>
             <li>Bhashyam high school</li>
             <li>Nano jr.cllg</li>
-            <li>CBIT</li>
+            <li>NGIT ( Osmania University )</li>
           </p>
         </div>
 
