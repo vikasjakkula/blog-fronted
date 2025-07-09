@@ -73,16 +73,29 @@ const Home = () => {
           <p>NGIT i.e,Neil Gogte Institute of Technology</p>
           <p>2025-2029</p>
         </div>
+        {/* Feature card 4 */}
+        <div className="feature-card">
+          <h2>Hustle Mode</h2>
+          <p>Start grow Inverst !</p>
+          <p>2029-2033</p>
+        </div>
       </div>
-      <div className="feature-card" style={{ marginTop: '2rem' }}>
-        <h2>Business</h2>
-        <p>2030-2050</p>
-        <p>Sell the company (Private Equity)</p>
-        <p>Have Fun!</p>
+      <div className="feature-card" style={{ marginTop: '3rem' }}>
+        <h2>What's Next?</h2>
+        <p>2035 & Beyond</p>
+        <p>Innovate, lead, and build impactful tech solutions.</p>
+        <p>Study the startup's : build grow inverst.</p>
+      </div>
+
+      </div>
+      <div className="feature-card" style={{ marginTop: '3rem' }}>
+        <h2>Dream</h2>
+        <p>20??</p>
+        <p>Finally Grand Delivary Of Brand New AMG G63 ❤️‍🔥</p>
+        <p>End !</p>
       </div>
       </div>
-    </div>
   );
-};
+}
 
 export default Home;

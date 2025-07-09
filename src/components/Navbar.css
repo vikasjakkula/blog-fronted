@@ -1,5 +1,5 @@
 .navbar {
-  background: #ffffff;
+  background: transparent;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
 }
 
 .navbar.dark {
-  background: #1a1a1a;
+  background: transparent;
 }
 
 .navbar.scrolled {
@@ -166,11 +166,11 @@
     left: -100%;
     opacity: 0;
     transition: all 0.5s ease;
-    background: #ffffff;
+    background: transparent;
   }
 
   .dark .nav-menu {
-    background: #1a1a1a;
+    background: transparent;
   }
 
   .nav-menu.active {
