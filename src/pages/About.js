@@ -8,7 +8,14 @@ const About = () => {
     // Main container for the about page
     <div className="about">
       {/* Page title */}
-      <h1>About Vikas!</h1>
+      <h1
+        style={{
+          fontFamily: "'Raleway', sans-serif",
+          color: '#232323', // blackgray
+        }}
+      >
+        About Vikas!
+      </h1>
       
       {/* Main content container */}
       <div className="about-content">

@@ -33,69 +33,79 @@ const Home = () => {
       </div>
 
       {/* Main heading */}
-      <h1>Welcome To My Blog</h1>
-      <img 
-        src="/Dp.png" 
-        alt="Dp" 
-        style={{
-          width: '200px',
-          height: '200px',
-          borderRadius: '50%',
-          objectFit: 'cover',
-          display: 'block',
-          margin: '20px auto'
-        }}
-      />
-      {/* Introduction text */}
-      <p>This modern is just for testing purposes , Checkout My page please</p>
-      <p>Myself Vikas Yadav</p>
-      <p>I am 17yr's old </p>
-      
-      {/* Features section with cards */}
-      
-      <div className="features-container ">
-      <div className="features">
-        {/* Feature card 1 */}
-        <div className="feature-card">
-          <h2>School</h2>
-          <p>Bhashyam high school</p>
-          <p>2021-2023</p>
-        </div>
-        {/* Feature card 2 */}
-        <div className="feature-card">
-          <h2>Intermediate</h2>
-          <p>Nano jr.cllg</p>
-          <p>2023-2025</p>
-        </div>
-        {/* Feature card 3 */}
-        <div className="feature-card">
-          <h2>Engineering</h2>
-          <p>NGIT i.e,Neil Gogte Institute of Technology</p>
-          <p>2025-2029</p>
-        </div>
-        {/* Feature card 4 */}
-        <div className="feature-card">
-          <h2>Hustle Mode</h2>
-          <p>Start grow Inverst !</p>
-          <p>2029-2033</p>
-        </div>
-      </div>
-      <div className="feature-card" style={{ marginTop: '3rem' }}>
-        <h2>What's Next?</h2>
-        <p>2035 & Beyond</p>
-        <p>Innovate, lead, and build impactful tech solutions.</p>
-        <p>Study the startup's : build grow inverst.</p>
-      </div>
-
-      </div>
-      <div className="feature-card" style={{ marginTop: '3rem' }}>
-        <h2>Dream</h2>
-        <p>20??</p>
-        <p>Finally Grand Delivary Of Brand New AMG G63 ❤️‍🔥</p>
-        <p>End !</p>
-      </div>
-      </div>
+      {/* Use Raleway font for all content below */}
+      {/*
+        You can also consider moving this style to a CSS class if you want to apply it globally.
+        For now, we'll use inline style as per the prompt.
+      */}
+      {(() => {
+        const ralewayFont = { fontFamily: "'Raleway', sans-serif" };
+        return (
+          <div style={ralewayFont}>
+            <h1 style={ralewayFont}>Welcome To My Blog</h1>
+            <img 
+              src="/Dp.png" 
+              alt="Dp" 
+              style={{
+                width: '200px',
+                height: '200px',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                display: 'block',
+                margin: '20px auto'
+              }}
+            />
+            {/* Introduction text */}
+            <p style={ralewayFont}>This modern is just for testing purposes , Checkout My page please</p>
+            <p style={ralewayFont}>Myself Vikas Yadav</p>
+            <p style={ralewayFont}>I am 17yr's old </p>
+            
+            {/* Features section with cards */}
+            <div className="features-container ">
+              <div className="features">
+                {/* Feature card 1 */}
+                <div className="feature-card" style={ralewayFont}>
+                  <h2 style={ralewayFont}>School</h2>
+                  <p style={ralewayFont}>Bhashyam high school</p>
+                  <p style={ralewayFont}>2021-2023</p>
+                </div>
+                {/* Feature card 2 */}
+                <div className="feature-card" style={ralewayFont}>
+                  <h2 style={ralewayFont}>Intermediate</h2>
+                  <p style={ralewayFont}>Nano jr.cllg</p>
+                  <p style={ralewayFont}>2023-2025</p>
+                </div>
+                {/* Feature card 3 */}
+                <div className="feature-card" style={ralewayFont}>
+                  <h2 style={ralewayFont}>Engineering</h2>
+                  <p style={ralewayFont}>NGIT i.e,Neil Gogte Institute of Technology</p>
+                  <p style={ralewayFont}>2025-2029</p>
+                </div>
+                {/* Feature card 4 */}
+                <div className="feature-card" style={ralewayFont}>
+                  <h2 style={ralewayFont}>Hustle Mode</h2>
+                  <p style={ralewayFont}>Start grow Inverst !</p>
+                  <p style={ralewayFont}>2029-2033</p>
+                </div>
+              </div>
+              <div className="feature-card" style={{ ...ralewayFont, marginTop: '3rem' }}>
+                <h2 style={ralewayFont}>What's Next?</h2>
+                <p style={ralewayFont}>2035 & Beyond</p>
+                <p style={ralewayFont}>Innovate, lead, and build impactful tech solutions.</p>
+                <p style={ralewayFont}>Study the startup's : build grow inverst.</p>
+              </div>
+            </div>
+            <div className="feature-card" style={{ ...ralewayFont, marginTop: '3rem' }}>
+              <h2 style={ralewayFont}>Dream</h2>
+              <p style={ralewayFont}>20??</p>
+              <p style={ralewayFont}>Finally Grand Delivary Of Brand New AMG G63 ❤️‍🔥</p>
+              <p style={ralewayFont}>End !</p>
+            </div>
+          </div>
+        );
+      })()}
+    </div>
   );
-}
+};
 
 export default Home;

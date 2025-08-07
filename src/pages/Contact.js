@@ -41,37 +41,41 @@ const Contact = () => {
     });
   };
 
+  // Inline style for Raleway font
+  const ralewayFont = { fontFamily: "'Raleway', sans-serif" };
+
   return (
     // Main container for the contact page
-    <div className="contact">
+    <div className="contact" style={ralewayFont}>
       {/* Toast notification */}
       {showToast && (
-        <div className="toast">
+        <div className="toast" style={ralewayFont}>
           <span className="toast-icon">✅</span>
           Message Sent Successfully!
         </div>
       )}
-      <h1>Contact Me ❤️‍🔥</h1>
-      <div className="contact-container">
+      <h1 style={ralewayFont}>Contact Me ❤️‍🔥</h1>
+      <div className="contact-container" style={ralewayFont}>
         {/* Contact information section */}
-        <div className="contact-info">
-          <h2>Get in Touch</h2>
-          <p>I'd love to hear from you. Please fill your opinion out there through X or Reddit</p>
+        <div className="contact-info" style={ralewayFont}>
+          <h2 style={ralewayFont}>Get in Touch</h2>
+          <p style={ralewayFont}>I'd love to hear from you. Please fill your opinion out there through X or Reddit</p>
           {/* Contact details */}
-          <ul>
+          <ul style={ralewayFont}>
             <li>
               <strong>Email:</strong>{' '}
-              <a href="mailto:vikasjakkula08@gmail.com">vikasjakkula08@gmail.com</a>
+              <a href="mailto:vikasjakkula08@gmail.com" style={ralewayFont}>vikasjakkula08@gmail.com</a>
             </li>
             <li>
               <strong>Social Media</strong>
-              <ul>
+              <ul style={ralewayFont}>
                 <li>
                   X (Twitter):{' '}
                   <a
                     href="https://twitter.com/vikas_070v"
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={ralewayFont}
                   >
                     @vikas_070v
                   </a>
@@ -82,6 +86,7 @@ const Contact = () => {
                     href="https://github.com/vikasjakkula"
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={ralewayFont}
                   >
                     github.com/vikasjakkula
                   </a>
@@ -92,6 +97,7 @@ const Contact = () => {
                     href="https://www.reddit.com/user/Relevant_Whole2540"
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={ralewayFont}
                   >
                     u/Relevant_Whole2540
                   </a>
@@ -102,30 +108,32 @@ const Contact = () => {
         </div>
 
         {/* Contact form section */}
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} style={ralewayFont}>
           {/* Email input field */}
-          <div className="form-group">
-            <label>Email</label>
+          <div className="form-group" style={ralewayFont}>
+            <label style={ralewayFont}>Email</label>
             <input
               type="email"
               name="email"
               required
               value={formData.email}
               onChange={handleChange}
+              style={ralewayFont}
             />
           </div>
           {/* Message textarea */}
-          <div className="form-group">
-            <label>Message</label>
+          <div className="form-group" style={ralewayFont}>
+            <label style={ralewayFont}>Message</label>
             <textarea
               name="message"
               required
               value={formData.message}
               onChange={handleChange}
+              style={ralewayFont}
             />
           </div>
           {/* Submit button */}
-          <button type="submit" className="submit-btn">Send Message</button>
+          <button type="submit" className="submit-btn" style={ralewayFont}>Send Message</button>
         </form>
       </div>
     </div>
