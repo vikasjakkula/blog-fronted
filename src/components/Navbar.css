@@ -1,5 +1,6 @@
 .navbar {
-  background: transparent;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  background: rgba(255, 255, 255, 0.7);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -11,7 +12,7 @@
 }
 
 .navbar.dark {
-  background: transparent;
+  background: rgba(30, 30, 30, 0.5);
 }
 
 .navbar.scrolled {
